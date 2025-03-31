@@ -25,6 +25,13 @@ services:
       - db
     links:
       - db
+  
+  front:
+    build:
+      context: next_front/.
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
 
 volumes:
   my-db:
