@@ -28,7 +28,7 @@ services:
   
   front:
     build:
-      context: next_front/.
+      context: Front-TallerArqui/.
       dockerfile: Dockerfile
     ports:
       - "3000:3000"
