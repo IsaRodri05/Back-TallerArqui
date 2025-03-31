@@ -1,0 +1,30 @@
+services:
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'arqui'
+      MYSQL_USER: 'trio-arqui'
+      MYSQL_PASSWORD: 'prueba123'
+      MYSQL_ROOT_PASSWORD: 'prueba123'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - my-db:/var/lib/mysql
+  
+  back:
+    build: django_back/.
+    restart: always
+    volumes:
+      - ./django_back/:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    links:
+      - db
+
+volumes:
+  my-db:
