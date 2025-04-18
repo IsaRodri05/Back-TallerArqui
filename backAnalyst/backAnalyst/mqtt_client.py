@@ -1,22 +1,28 @@
 import paho.mqtt.client as mqtt
-
-MQTT_SERVER = "broker.emqx.io"
-MQTT_PORT = 1883
-MQTT_KEEPALIVE = 60
+import json
+from decouple import config
 
 def on_connect(client, userdata, flags, rc):
     if rc == 0:
-        print("Connected to MQTT broker")
-        client.subscribe("test/topic")
+        print("✅ Conectado a MQTT broker")
+        client.subscribe(config('MQTT_TOPIC'))
     else:
-        print(f"Failed to connect, return code {rc}")
+        print(f"❌ Falló la conexión, código {rc}")
 
 def on_message(client, userdata, msg):
-    print(f"Message received: {msg.topic} {msg.payload.decode()}")
+    try:
+        payload = json.loads(msg.payload.decode())
+        print("📥 Mensaje recibido:")
+        print(f"📦 Producto: {payload['nombre']}")
+        print(f"📅 Fecha: {payload['fecha']}")
+        print(f"⏰ Hora: {payload['hora']}")
+        print(f"🔢 Cantidad: {payload['cantidad']}")
+    except Exception as e:
+        print(f"❗ Error procesando el mensaje: {e}")
 
 client = mqtt.Client()
 client.on_connect = on_connect
 client.on_message = on_message
-client.connect(MQTT_SERVER, MQTT_PORT, MQTT_KEEPALIVE)
+client.connect(config('MQTT_SERVER'), int(config('MQTT_PORT')), int(config('MQTT_KEEPALIVE')))
 
-
+client.loop_forever()
