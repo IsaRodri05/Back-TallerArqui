@@ -1,6 +1,7 @@
 import paho.mqtt.client as mqtt
 import json
 from decouple import config
+from manageBD import bd_update
 
 def on_connect(client, userdata, flags, rc):
     if rc == 0:
@@ -12,11 +13,14 @@ def on_connect(client, userdata, flags, rc):
 def on_message(client, userdata, msg):
     try:
         payload = json.loads(msg.payload.decode())
+        print(f"📦 Mensaje recibido:{payload}")
         print("📥 Mensaje recibido:")
         print(f"📦 Producto: {payload['nombre']}")
         print(f"📅 Fecha: {payload['fecha']}")
         print(f"⏰ Hora: {payload['hora']}")
         print(f"🔢 Cantidad: {payload['cantidad']}")
+        bd_update.save_notification(payload)
+        bd_update.update_product(payload)
     except Exception as e:
         print(f"❗ Error procesando el mensaje: {e}")
 
