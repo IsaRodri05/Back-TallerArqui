@@ -8,5 +8,6 @@ do
 done
 
 echo "MySQL está listo, ejecutando migraciones y el servidor..."
+python manage.py makemigrations 
 python manage.py migrate
 python manage.py runserver 0.0.0.0:8000
