@@ -31,11 +31,10 @@ class ProductViewSet(viewsets.ModelViewSet):
         if product.stock < 10:
             try:
                 payload = {
-                    "event": "low_stock",
-                    "product_id": product.id,
-                    "product_name": product.name,
-                    "stock_left": product.stock,
-                    "timestamp": datetime.utcnow().isoformat()
+                    "nombre": product.name,
+                    "fecha": datetime.now().strftime("%Y-%m-%d"),
+                    "hora": datetime.now().strftime("%H:%M"),
+                    "cantidad restante": product.stock
                 }
                 publish_low_stock_alert(payload)
             except Exception as e:
