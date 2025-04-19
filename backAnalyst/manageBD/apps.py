@@ -1,3 +1,4 @@
+import os
 from django.apps import AppConfig
 
 
@@ -6,5 +7,6 @@ class ManagebdConfig(AppConfig):
     name = 'manageBD'
 
     def ready(self):
-        from backAnalyst.ready import start_mqtt
-        start_mqtt()
+         if os.environ.get('RUN_MAIN') == 'true':
+            from backAnalyst.ready import start_mqtt
+            start_mqtt()

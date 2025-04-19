@@ -46,4 +46,4 @@ while True:
     payload = json.dumps(mock_data)
     client.publish(config('MQTT_TOPIC'), payload)
     print(f"📤 Publicando: {payload}")
-    time.sleep(5)  # Espera de 5 segundos antes de enviar el siguiente mensaje
+    time.sleep(30)  # Espera de 30 segundos antes de enviar el siguiente mensaje
