@@ -1,4 +1,5 @@
 Django
+djangorestframework
 mysqlclient
 python-decouple
 paho-mqtt

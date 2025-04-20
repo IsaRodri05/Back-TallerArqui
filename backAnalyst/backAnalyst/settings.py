@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'manageBD.apps.ManagebdConfig',
-    'realtimeNotifications.apps.RealtimenotificationsConfig',
+    'changesHistory.apps.ChangeshistoryConfig',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

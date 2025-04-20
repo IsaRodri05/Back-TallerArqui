@@ -6,11 +6,12 @@ CREATE TABLE IF NOT EXISTS Product (
     amount INT NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS Notification (
+CREATE TABLE IF NOT EXISTS Changes (
     id INT AUTO_INCREMENT PRIMARY KEY,
     date DATE NOT NULL,
     time TIME NOT NULL,
-    product_id INT NOT NULL
+    product_id INT NOT NULL,
+    amount INT NOT NULL
 );
 
 INSERT INTO Product (name, amount) VALUES ("Producto A", 15);
