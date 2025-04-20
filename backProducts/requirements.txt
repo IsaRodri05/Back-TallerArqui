@@ -3,3 +3,4 @@ djangorestframework
 mysqlclient
 python-decouple
 paho-mqtt
+django-cors-headers

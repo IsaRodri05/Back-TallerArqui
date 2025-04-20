@@ -20,9 +20,13 @@ def on_message(client, userdata, msg):
     except Exception as e:
         print(f"❗ Error procesando el mensaje: {e}")
 
-client = mqtt.Client()
-client.on_connect = on_connect
-client.on_message = on_message
-client.connect(config('MQTT_SERVER'), int(config('MQTT_PORT')), int(config('MQTT_KEEPALIVE')))
-
-client.loop_forever()
+def start_mqtt_client():
+    client = mqtt.Client()
+    client.on_connect = on_connect
+    client.on_message = on_message
+    client.connect(
+        config('MQTT_SERVER'),
+        int(config('MQTT_PORT')),
+        int(config('MQTT_KEEPALIVE'))
+    )
+    client.loop_forever()
