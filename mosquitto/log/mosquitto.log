@@ -243,4 +243,39 @@
 1745191958: New connection from 172.20.0.6:54563 on port 1883.
 1745191958: New client connected from 172.20.0.6:54563 as auto-F9E1DB58-2954-231B-CBBD-4BE8B8F4506C (p2, c1, k60).
 1745191959: New connection from 172.20.0.6:59173 on port 1883.
-1745191959: New client connected from 172.20.0.6:59173 as auto-8FAC3C9E-BDB3-5FD1-35CA-615D4CDF44C7 (p2, c1, k60).
+1745191959: New client connected from 172.20.0.6:59173 as auto-8FAC3C9E-BDB3-5FD1-35CA-615D4CDF44C7 (p2, c1, k60).1745196941: mosquitto version 2.0.21 starting
+1745196941: Config loaded from /mosquitto/config/mosquitto.conf.
+1745196941: Opening ipv4 listen socket on port 1883.
+1745196941: Opening ipv6 listen socket on port 1883.
+1745196941: mosquitto version 2.0.21 running
+1745196946: New connection from 172.19.0.5:39507 on port 1883.
+1745196946: New client connected from 172.19.0.5:39507 as auto-68322414-9588-0294-D6EA-05F7F4321EB4 (p2, c1, k60).
+1745196946: Client auto-68322414-9588-0294-D6EA-05F7F4321EB4 closed its connection.
+1745196946: New connection from 172.19.0.5:48739 on port 1883.
+1745196946: New client connected from 172.19.0.5:48739 as auto-A6DD5163-569A-5907-B30F-E7FACC5956BC (p2, c1, k60).
+1745196946: Client auto-A6DD5163-569A-5907-B30F-E7FACC5956BC closed its connection.
+1745196947: New connection from 172.19.0.5:57909 on port 1883.
+1745196947: New client connected from 172.19.0.5:57909 as auto-273B251B-B97E-1A0E-31F4-536BD8C3BC2B (p2, c1, k60).
+1745196947: New connection from 172.19.0.5:57079 on port 1883.
+1745196947: New client connected from 172.19.0.5:57079 as auto-A4E672D1-09CF-BD6C-85EB-976D61C9C23D (p2, c1, k60).
+1745196958: Client auto-A4E672D1-09CF-BD6C-85EB-976D61C9C23D closed its connection.
+1745196958: Client auto-273B251B-B97E-1A0E-31F4-536BD8C3BC2B closed its connection.
+1745196958: mosquitto version 2.0.21 terminating
+1745196958: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1745197227: mosquitto version 2.0.21 starting
+1745197227: Config loaded from /mosquitto/config/mosquitto.conf.
+1745197227: Opening ipv4 listen socket on port 1883.
+1745197227: Opening ipv6 listen socket on port 1883.
+1745197227: mosquitto version 2.0.21 running
+1745197233: New connection from 172.19.0.5:53327 on port 1883.
+1745197233: New client connected from 172.19.0.5:53327 as auto-7E27C084-BB7D-FA9C-943F-516E4007A51C (p2, c1, k60).
+1745197233: Client auto-7E27C084-BB7D-FA9C-943F-516E4007A51C closed its connection.
+1745197233: New connection from 172.19.0.5:56371 on port 1883.
+1745197233: New client connected from 172.19.0.5:56371 as auto-E4B848A9-19F8-4D0A-87E7-1E8DDBCE3B42 (p2, c1, k60).
+1745197233: Client auto-E4B848A9-19F8-4D0A-87E7-1E8DDBCE3B42 closed its connection.
+1745197233: New connection from 172.19.0.5:51385 on port 1883.
+1745197233: New client connected from 172.19.0.5:51385 as auto-3A0890A2-C9CB-99D6-F0FF-828FA3473317 (p2, c1, k60).
+1745197233: New connection from 172.19.0.6:43027 on port 1883.
+1745197233: New client connected from 172.19.0.6:43027 as auto-51F217C8-A79A-453E-A48B-9FCEF7F74F3C (p2, c1, k60).
+1745197233: New connection from 172.19.0.5:42747 on port 1883.
+1745197233: New client connected from 172.19.0.5:42747 as auto-BB6CB43C-5E17-9FC3-5CF5-E655C4D7F21F (p2, c1, k60).
