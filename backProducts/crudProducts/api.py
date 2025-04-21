@@ -34,7 +34,7 @@ class ProductViewSet(viewsets.ModelViewSet):
                     "nombre": product.name,
                     "fecha": datetime.now().strftime("%Y-%m-%d"),
                     "hora": datetime.now().strftime("%H:%M"),
-                    "cantidad restante": product.stock
+                    "cantidad": product.stock
                 }
                 publish_low_stock_alert(payload)
             except Exception as e:
