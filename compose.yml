@@ -63,11 +63,11 @@ services:
       context: Front-TallerArqui/FrontAnalyst/.
       dockerfile: Dockerfile
     ports:
-      - "3000:3000"
+      - "3001:3000"
   
   front_product:
     build:
-      context: Front-TallerArqui/FrontProducts/.
+      context: Front-TallerArqui/frontProducts/.
       dockerfile: Dockerfile
     ports:
       - "3000:3000"
