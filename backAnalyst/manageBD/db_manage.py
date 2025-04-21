@@ -9,10 +9,11 @@ def save_changes(message):
     change.save()
     return change
 
-def update_product(message):
-    product = Product.objects.get(name=message['nombre'])
-    product.amount = message['cantidad']
-    product.save()
+def update_create_product(message):
+    product, created = Product.objects.get_or_create(name=message['nombre'], defaults={'amount': message['cantidad']})
+    if not created:
+        product.amount = message['cantidad']
+        product.save()
     return product
 
 def last_changes():

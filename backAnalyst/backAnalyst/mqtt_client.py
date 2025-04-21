@@ -19,8 +19,8 @@ def on_message(client, userdata, msg):
         print(f"📅 Fecha: {payload['fecha']}")
         print(f"⏰ Hora: {payload['hora']}")
         print(f"🔢 Cantidad: {payload['cantidad']}")
+        db_manage.update_create_product(payload)
         db_manage.save_changes(payload)
-        db_manage.update_product(payload)
     except Exception as e:
         print(f"❗ Error procesando el mensaje: {e}")
 
