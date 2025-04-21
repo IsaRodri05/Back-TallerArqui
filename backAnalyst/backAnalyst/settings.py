@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'manageBD.apps.ManagebdConfig',
+    'changesHistory.apps.ChangeshistoryConfig',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
