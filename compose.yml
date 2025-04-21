@@ -58,12 +58,20 @@ services:
       - ./mosquitto/data:/mosquitto/data
       - ./mosquitto/log:/mosquitto/log
   
-#  front:
-#    build:
-#      context: Front-TallerArqui/.
-#      dockerfile: Dockerfile
-#    ports:
-#      - "3000:3000"
+  front_analyst:
+    build:
+      context: Front-TallerArqui/FrontAnalyst/.
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+  
+  front_product:
+    build:
+      context: Front-TallerArqui/FrontProducts/.
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+
 
 volumes:
   analyst-db:
